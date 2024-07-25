@@ -1,3 +1,4 @@
+# commented out some to install later in setup.py for speed
 jax>=0.4.30
 jaxlib>=0.4.30
 orbax-checkpoint>=0.5.21

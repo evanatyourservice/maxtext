@@ -193,4 +193,9 @@ if [[ "$MODE" == "pinned" ]]; then
 else
     pip3 install -U -r requirements.txt
 fi
+
+pip3 install cloud-accelerator-diagnostics
+pip3 install cloud-tpu-diagnostics
+pip3 install ml-goodput-measurement
+
 [ -d ".git" ] && pre-commit install
