@@ -4,8 +4,8 @@ orbax-checkpoint>=0.5.21
 absl-py
 array-record
 aqtp
-cloud-accelerator-diagnostics
-cloud-tpu-diagnostics
+# cloud-accelerator-diagnostics
+# cloud-tpu-diagnostics
 datasets
 gcsfs
 google-cloud-storage
