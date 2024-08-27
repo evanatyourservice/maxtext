@@ -115,7 +115,7 @@ elif [[ "$MODE" == "stable" || ! -v MODE ]]; then
             pip3 install jax[tpu]==${JAX_VERSION} -f https://storage.googleapis.com/jax-releases/libtpu_releases.html
         else
             echo "Installing stable jax, jaxlib, libtpu for tpu"
-            pip3 install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html
+            pip3 install 'jax[tpu]>0.4' -f https://storage.googleapis.com/jax-releases/libtpu_releases.html
         fi
 
         if [[ -n "$LIBTPU_GCS_PATH" ]]; then
@@ -151,9 +151,7 @@ elif [[ $MODE == "nightly" ]]; then
     if [[ $DEVICE == "gpu" ]]; then
         echo "Installing jax-nightly, jaxlib-nightly"
         # Install jax-nightly
-        pip3 install --pre -U jax -f https://storage.googleapis.com/jax-releases/jax_nightly_releases.html
-        # Install jaxlib-nightly
-        pip3 install -U --pre jaxlib -f https://storage.googleapis.com/jax-releases/jaxlib_nightly_cuda12_releases.html
+        pip3 install --pre -U 'jax[cuda12]' -f https://storage.googleapis.com/jax-releases/jax_nightly_releases.html
         # Install Transformer Engine
         export NVTE_FRAMEWORK=jax
         pip3 install git+https://github.com/NVIDIA/TransformerEngine.git@stable
@@ -193,9 +191,3 @@ if [[ "$MODE" == "pinned" ]]; then
 else
     pip3 install -U -r requirements.txt
 fi
-
-pip3 install cloud-accelerator-diagnostics
-pip3 install cloud-tpu-diagnostics
-pip3 install ml-goodput-measurement
-
-[ -d ".git" ] && pre-commit install
