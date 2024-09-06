@@ -199,7 +199,6 @@ pip3 install -U grain-nightly
 pip3 install -U flax>=0.8.0
 pip3 install -U ml-collections
 pip3 install -U ml-goodput-measurement
-pip3 install -U numpy
 pip3 install -U optax
 pip3 install -U protobuf==3.20.3
 pip3 install -U pylint
@@ -218,3 +217,4 @@ pip3 install -U transformers
 pip3 install -U mlperf-logging@git+https://github.com/mlperf/logging.git
 pip3 install -U google-jetstream
 pip3 install -U jsonlines
+pip3 install -U numpy<2
