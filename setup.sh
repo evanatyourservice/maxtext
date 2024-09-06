@@ -184,24 +184,42 @@ else
     exit 1
 fi
 
-# Install dependencies from requirements.txt
-cd $run_name_folder_path && pip install --upgrade pip
-if [[ "$MODE" == "pinned" ]]; then
-    pip3 install -U -r requirements.txt -c constraints_gpu.txt
-else
-    pip3 install -U -r requirements.txt
-fi
+# Install dependencies
+pip3 install -U \
+    jax>=0.4.30 \
+    jaxlib>=0.4.30 \
+    orbax-checkpoint>=0.5.21 \
+    absl-py \
+    array-record \
+    aqtp \
+    cloud-accelerator-diagnostics \
+    cloud-tpu-diagnostics \
+    datasets \
+    gcsfs \
+    google-cloud-aiplatform==1.61.0 \
+    google-cloud-storage \
+    grain-nightly \
+    flax>=0.8.0 \
+    ml-collections \
+    ml-goodput-measurement \
+    numpy \
+    optax \
+    protobuf==3.20.3 \
+    pylint \
+    pytest \
+    pyink \
+    pre-commit \
+    pytype \
+    sentencepiece==0.1.97 \
+    tensorflow-text>=2.13.0 \
+    tensorflow>=2.13.0 \
+    tensorflow-datasets \
+    tensorboardx \
+    tensorboard-plugin-profile \
+    tiktoken \
+    transformers \
+    jsonlines
 
-# install packages commented out in requirements.txt
-pip3 install -U cloud-accelerator-diagnostics
-pip3 install -U cloud-tpu-diagnostics
-pip3 install -U ml-goodput-measurement
+# Install packages with special requirements
 pip3 install -U mlperf-logging@git+https://github.com/mlperf/logging.git
 pip3 install -U google-jetstream
-pip3 install -U sentencepiece==0.1.97
-pip3 install -U tensorflow-text>=2.13.0
-pip3 install -U tensorflow>=2.13.0
-pip3 install -U tensorflow-datasets
-pip3 install -U tensorboardx
-pip3 install -U tensorboard-plugin-profile
-
