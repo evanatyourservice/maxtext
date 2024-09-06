@@ -185,41 +185,36 @@ else
 fi
 
 # Install dependencies
-pip3 install -U \
-    jax>=0.4.30 \
-    jaxlib>=0.4.30 \
-    orbax-checkpoint>=0.5.21 \
-    absl-py \
-    array-record \
-    aqtp \
-    cloud-accelerator-diagnostics \
-    cloud-tpu-diagnostics \
-    datasets \
-    gcsfs \
-    google-cloud-aiplatform==1.61.0 \
-    google-cloud-storage \
-    grain-nightly \
-    flax>=0.8.0 \
-    ml-collections \
-    ml-goodput-measurement \
-    numpy \
-    optax \
-    protobuf==3.20.3 \
-    pylint \
-    pytest \
-    pyink \
-    pre-commit \
-    pytype \
-    sentencepiece==0.1.97 \
-    tensorflow-text>=2.13.0 \
-    tensorflow>=2.13.0 \
-    tensorflow-datasets \
-    tensorboardx \
-    tensorboard-plugin-profile \
-    tiktoken \
-    transformers \
-    jsonlines
-
-# Install packages with special requirements
+pip3 install -U orbax-checkpoint>=0.5.21
+pip3 install -U absl-py
+pip3 install -U array-record
+pip3 install -U aqtp
+pip3 install -U cloud-accelerator-diagnostics
+pip3 install -U cloud-tpu-diagnostics
+pip3 install -U datasets
+pip3 install -U gcsfs
+pip3 install -U google-cloud-aiplatform==1.61.0
+pip3 install -U google-cloud-storage
+pip3 install -U grain-nightly
+pip3 install -U flax>=0.8.0
+pip3 install -U ml-collections
+pip3 install -U ml-goodput-measurement
+pip3 install -U numpy
+pip3 install -U optax
+pip3 install -U protobuf==3.20.3
+pip3 install -U pylint
+pip3 install -U pytest
+pip3 install -U pyink
+pip3 install -U pre-commit
+pip3 install -U pytype
+pip3 install -U sentencepiece==0.1.97
+pip3 install -U tensorflow-text>=2.13.0
+pip3 install -U tensorflow>=2.13.0
+pip3 install -U tensorflow-datasets
+pip3 install -U tensorboardx
+pip3 install -U tensorboard-plugin-profile
+pip3 install -U tiktoken
+pip3 install -U transformers
 pip3 install -U mlperf-logging@git+https://github.com/mlperf/logging.git
 pip3 install -U google-jetstream
+pip3 install -U jsonlines
