@@ -196,3 +196,12 @@ fi
 pip3 install -U cloud-accelerator-diagnostics
 pip3 install -U cloud-tpu-diagnostics
 pip3 install -U ml-goodput-measurement
+pip3 install -U mlperf-logging@git+https://github.com/mlperf/logging.git
+pip3 install -U google-jetstream
+pip3 install -U sentencepiece==0.1.97
+pip3 install -U tensorflow-text>=2.13.0
+pip3 install -U tensorflow>=2.13.0
+pip3 install -U tensorflow-datasets
+pip3 install -U tensorboardx
+pip3 install -U tensorboard-plugin-profile
+

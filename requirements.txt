@@ -23,14 +23,14 @@ pytest
 pyink
 pre-commit
 pytype
-sentencepiece==0.1.97
-tensorflow-text>=2.13.0
-tensorflow>=2.13.0
-tensorflow-datasets
-tensorboardx
-tensorboard-plugin-profile
+# sentencepiece==0.1.97
+# tensorflow-text>=2.13.0
+# tensorflow>=2.13.0
+# tensorflow-datasets
+# tensorboardx
+# tensorboard-plugin-profile
 tiktoken
 transformers
-mlperf-logging@git+https://github.com/mlperf/logging.git
-google-jetstream
+# mlperf-logging@git+https://github.com/mlperf/logging.git
+# google-jetstream
 jsonlines
